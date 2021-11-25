@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#Page-Game {
+    width: 100vw;
+    height: 100vh;
+    
+    .Header-Game {
+        display: flex;
+        justify-content: center;
+
+        margin: 3px;
+
+        h2 {
+            background-color: gray;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+    }
+
+    #Game-Button {
+        display: flex;
+        flex-direction: column;
+        
+        .Bigger-Button {
+            background-color: black;
+            height: 70px;
+            width: 12px;
+            border: none;
+        }
+
+        .Click-Button {
+            background-color:red;
+            height: 10px;
+            width: 12px;
+            border: none;
+        }
+    }
+}
