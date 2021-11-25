@@ -19,8 +19,11 @@ function App() {
 
       <main>
         <div id="Game-Button">
-          <button className="Bigger-Button"></button>
-          <button className="Click-Button" onClick={increment}></button>
+ 
+          <button className="Bigger-Button">
+              <button className="Click-Button" onClick={increment}></button>
+          </button>
+      
         </div>
       </main>
 

@@ -20,23 +20,61 @@
             margin-left: 10px;
         }
     }
+    
+    @keyframes slide {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes positionChange {
+        from {
+            transform: translate(0,0);
+        }
+        to {
+            transform: translate(calc(100vw - 120px), calc(100vh - 120px))
+        }
+    }
 
     #Game-Button {
+        width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: column;
+        margin: 0 30px 30px 30px;
+        animation: positionChange;
+        animation-duration: 10s;
+        animation-direction: var();
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
         
         .Bigger-Button {
             background-color: black;
             height: 70px;
             width: 12px;
             border: none;
-        }
+            animation: slide 5s infinite;
+            display: flex;
+            justify-content: end;
 
-        .Click-Button {
-            background-color:red;
-            height: 10px;
-            width: 12px;
-            border: none;
+            .Click-Button {
+                background-color:red;
+                height: 15px;
+                width: 12px;
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
     }
+}
+
+:root {
+    --left: 3;
+    --right: 3;
 }
